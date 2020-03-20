@@ -8,10 +8,15 @@ class Searchbar extends Component {
   onInputChange = e => {
     this.setState({ term: e.target.value });
   };
+
+  onFormSubmit = e => {
+    //
+  };
+
   render() {
     return (
       <div className='mt-2'>
-        <form>
+        <form onSubmit={onFormSubmit}>
           <div className='input-group mb-3'>
             <div className='input-group-prepend'>
               <span className='input-group-text'>Video Search</span>
