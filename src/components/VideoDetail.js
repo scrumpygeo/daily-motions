@@ -1,7 +1,7 @@
 import React from 'react';
 
-function VideoDetail() {
-  return <div></div>;
-}
+const VideoDetail = () => {
+  return <div>VideoDetail</div>;
+};
 
 export default VideoDetail;

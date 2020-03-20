@@ -1,16 +1,16 @@
 import React from 'react';
 
 const VideoItem = ({ video }) => {
-  console.log(video);
+  // console.log(video);
   return (
-    <div className='d-flex align-items-center' style={{ cursor: 'pointer' }}>
+    <div className='card' style={{ cursor: 'pointer' }}>
       <img
         src={video.thumbnail_url}
-        alt='video.title'
+        alt={video.title}
         width={'180px'}
-        className='mb-3'
+        className='card-img-top img-fluid'
       />
-      <div className='mx-3 pl-2'>
+      <div className='card-body'>
         <p>{video.title}</p>
       </div>
     </div>
