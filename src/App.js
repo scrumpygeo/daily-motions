@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './components/Searchbar';
 import Navbar from './components/Navabar';
 import Alert from './components/Alert';
+import VideoList from './components/VideoList';
 import dailymotion from './components/apis/dailymotion';
 import './App.css';
 
@@ -23,11 +24,11 @@ class App extends Component {
       const resp = await dailymotion.get(
         `/videos?fields=channel.name%2Cthumbnail_url%2Cid%2Ctitle&search=${term}`
       );
-      console.log(resp);
+      this.setState({ videos: resp.data.list });
+      // console.log(resp.data.list);
     } catch (err) {
       this.setState({ errorMessage: err });
-      // todo: message
-      console.log(this.state.errorMessage);
+      // console.log(this.state.errorMessage);
     }
   };
 
@@ -41,6 +42,7 @@ class App extends Component {
             onTermSubmit={this.onTermSubmit}
             setAlert={this.setAlert}
           />
+          <VideoList videos={this.state.videos} />
         </div>
       </div>
     );
