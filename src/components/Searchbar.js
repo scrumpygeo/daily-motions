@@ -10,13 +10,18 @@ class Searchbar extends Component {
   };
 
   onFormSubmit = e => {
-    //
+    e.preventDefault();
+    if (this.state.term === '') {
+      this.props.setAlert('   Please enter a search term', 'danger');
+    } else {
+      this.props.onTermSubmit(this.state.term);
+    }
   };
 
   render() {
     return (
       <div className='mt-2'>
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={this.onFormSubmit}>
           <div className='input-group mb-3'>
             <div className='input-group-prepend'>
               <span className='input-group-text'>Video Search</span>
