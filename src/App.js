@@ -42,7 +42,12 @@ class App extends Component {
             onTermSubmit={this.onTermSubmit}
             setAlert={this.setAlert}
           />
-          <VideoList videos={this.state.videos} />
+          <div className='rows'>
+            <div className='col-md-8'></div>
+            <div className='col-md-4'>
+              <VideoList videos={this.state.videos} />
+            </div>
+          </div>
         </div>
       </div>
     );
