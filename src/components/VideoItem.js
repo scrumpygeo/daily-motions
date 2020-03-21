@@ -1,9 +1,14 @@
 import React from 'react';
 
-const VideoItem = ({ video }) => {
-  // console.log(video);
+const VideoItem = ({ video, onVideoSelect }) => {
   return (
-    <div className='card' style={{ cursor: 'pointer' }}>
+    <div
+      className='card'
+      style={{ cursor: 'pointer' }}
+      onClick={() => {
+        onVideoSelect(video);
+      }}
+    >
       <img
         src={video.thumbnail_url}
         alt={video.title}

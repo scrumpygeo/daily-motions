@@ -25,3 +25,7 @@ allowfullscreen allow="autoplay"></iframe>
         })
 
 ```
+
+---
+
+Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
