@@ -27,6 +27,12 @@ class App extends Component {
 
   onVideoSelect = video => {
     this.setState({ selectedVideo: video });
+
+    // on mobile screen show video after selection
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   onTermSubmit = async term => {
