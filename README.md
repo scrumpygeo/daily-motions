@@ -5,3 +5,7 @@ Responsive React app allowing search for Dailymotion videos and use of embeded p
 Available functionality is restricted due to decision not to use API key in front end development.
 
 This is a basic app whose purpose is to practice React development
+
+Viewable on:
+
+https://daily-motions.herokuapp.com/
